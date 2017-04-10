@@ -1,0 +1,10 @@
+
+1) incremental
+
+	- insertion sort
+	
+2) divide and conquer
+
+	- merge sort
+	- find maximum subarray
+	- Strassen's algorithm for multiplying square matrices

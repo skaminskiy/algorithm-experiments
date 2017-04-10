@@ -1,0 +1,3 @@
+One divide and conquer algorithm for multiplying nxn matrices runs in Big Theta(n^3) time,
+which is not better than the straightforward method of multiplying square matrices.
+But the other, Strassen's algorithm, runs in O(n^2.81) time = O(n^lg7).

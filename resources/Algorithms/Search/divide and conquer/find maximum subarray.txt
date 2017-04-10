@@ -1,0 +1,2 @@
+Big Theta(nlgn) time
+There is in fact a linear-time algorithm that doesn't use divide and conquer.
