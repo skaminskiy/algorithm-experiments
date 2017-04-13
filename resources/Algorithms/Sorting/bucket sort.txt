@@ -1,0 +1,14 @@
+Insertion sort, merge sort, heapsort, and quicksort are all comparison sorts: they
+determine the sorted order of an input array by comparing elements. Chapter 8 begins
+by introducing the decision-tree model in order to study the performance limitations
+of comparison sorts. Using this model, we prove a lower bound of Big Omega(nlgn)
+on the worst-case running time of any comparison sort on n inputs, thus showing
+that heapsort and merge sort are asymptotically optimal comparison sorts.
+
+We can beat this lower bound of Big Omega(nlgn)
+if we can gather information about the sorted order of the input by means other
+than comparing elements.
+
+Bucket sort, requires knowledge of the probabilistic
+distribution of numbers in the input array. It can sort n real numbers uniformly
+distributed in the half-open interval [0, 1] in average-case O(n) time.

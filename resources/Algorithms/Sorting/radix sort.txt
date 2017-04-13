@@ -1,0 +1,16 @@
+Insertion sort, merge sort, heapsort, and quicksort are all comparison sorts: they
+determine the sorted order of an input array by comparing elements. Chapter 8 begins
+by introducing the decision-tree model in order to study the performance limitations
+of comparison sorts. Using this model, we prove a lower bound of Big Omega(nlgn)
+on the worst-case running time of any comparison sort on n inputs, thus showing
+that heapsort and merge sort are asymptotically optimal comparison sorts.
+
+We can beat this lower bound of Big Omega(nlgn)
+if we can gather information about the sorted order of the input by means other
+than comparing elements.
+
+Radix sort, can be used to extend the range of
+counting sort. If there are n integers to sort, each integer has d digits, and each
+digit can take on up to k possible values, then radix sort can sort the numbers
+in Big Theta(d*(n+k)) time. When d is a constant and k is O(n), radix sort runs in
+linear time.
