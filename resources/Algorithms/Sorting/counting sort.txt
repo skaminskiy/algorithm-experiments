@@ -1,7 +1,5 @@
 Insertion sort, merge sort, heapsort, and quicksort are all comparison sorts: they
-determine the sorted order of an input array by comparing elements. Chapter 8 begins
-by introducing the decision-tree model in order to study the performance limitations
-of comparison sorts. Using this model, we prove a lower bound of Big Omega(nlgn)
+determine the sorted order of an input array by comparing elements. Lower bound is Big Omega(nlgn)
 on the worst-case running time of any comparison sort on n inputs, thus showing
 that heapsort and merge sort are asymptotically optimal comparison sorts.
 
@@ -14,3 +12,10 @@ By using array indexing as a tool
 for determining relative order, counting sort can sort n numbers in Big Theta(k + n) time.
 Thus, when k = O(n), counting sort runs in time that is linear in the size of the
 input array.
+
+An important property of counting sort is that it is stable: numbers with the same
+value appear in the output array in the same order as they do in the input array.
+Normally, the property of
+stability is important only when satellite data are carried around with the element
+being sorted. Counting sort’s stability is important for another reason: counting
+sort is often used as a subroutine in radix sort.

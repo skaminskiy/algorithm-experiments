@@ -1,0 +1,13 @@
+The general selection problem appears more difficult than the simple problem of
+finding a minimum. Yet, surprisingly, the asymptotic running time for both problems
+is the same: Big Theta(n).
+
+As in quicksort, we partition the input array
+recursively. But unlike quicksort, which recursively processes both sides of the
+partition, RANDOMIZED-SELECT works on only one side of the partition.
+
+The worst-case running time for RANDOMIZED-SELECT is Big Theta(n^2), even to find
+the minimum, because we could be extremely unlucky and always partition around
+the largest remaining element, and partitioning takes Big Theta(n) time.
+The algorithm has a linear expected running time, though, and because it is randomized,
+no particular input elicits the worst-case behavior.

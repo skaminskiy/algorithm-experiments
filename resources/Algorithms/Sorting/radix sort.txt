@@ -1,7 +1,5 @@
 Insertion sort, merge sort, heapsort, and quicksort are all comparison sorts: they
-determine the sorted order of an input array by comparing elements. Chapter 8 begins
-by introducing the decision-tree model in order to study the performance limitations
-of comparison sorts. Using this model, we prove a lower bound of Big Omega(nlgn)
+determine the sorted order of an input array by comparing elements. Lower bound is Big Omega(nlgn)
 on the worst-case running time of any comparison sort on n inputs, thus showing
 that heapsort and merge sort are asymptotically optimal comparison sorts.
 
@@ -14,3 +12,22 @@ counting sort. If there are n integers to sort, each integer has d digits, and e
 digit can take on up to k possible values, then radix sort can sort the numbers
 in Big Theta(d*(n+k)) time. When d is a constant and k is O(n), radix sort runs in
 linear time.
+
+For example, we might wish to sort dates by three keys: year, month, and day. We
+could run a sorting algorithm with a comparison function that, given two dates,
+compares years, and if there is a tie, compares months, and if another tie occurs,
+compares days. Alternatively, we could sort the information three times with a
+stable sort: first on day, next on month, and finally on year.
+
+Is radix sort preferable to a comparison-based sorting algorithm, such as quicksort?
+If b = O(lgn), as is often the case, and we choose r ~ lgn, then radix sort’s
+running time is Big Theta(n), which appears to be better than quicksort’s expected running
+time of Big Theta(nlgn). The constant factors hidden in the Big Theta-notation differ, however.
+Although radix sort may make fewer passes than quicksort over the n keys, each
+pass of radix sort may take significantly longer. Which sorting algorithm we prefer
+depends on the characteristics of the implementations, of the underlying machine
+(e.g., quicksort often uses hardware caches more effectively than radix sort), and
+of the input data. Moreover, the version of radix sort that uses counting sort as the
+intermediate stable sort does not sort in place, which many of the Big Theta(nlgn)-time
+comparison sorts do. Thus, when primary memory storage is at a premium, we
+might prefer an in-place algorithm such as quicksort.

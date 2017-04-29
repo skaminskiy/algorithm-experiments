@@ -1,0 +1,66 @@
+Quicksort sorts n numbers in place, but its worst-case running
+time is Big Theta(n2). Its expected running time is Big Theta(nlgn), however, and it generally
+outperforms heapsort in practice. Like insertion sort, quicksort has tight code, and
+so the hidden constant factor in its running time is small. It is a popular algorithm
+for sorting large input arrays.
+Despite this slow worst-case running time, quicksort is often the best
+practical choice for sorting because it is remarkably efficient on the average: its
+expected running time is Big Theta(nlgn), and the constant factors hidden in the Big Theta(nlgn)
+notation are quite small. It also has the advantage of sorting in place,
+and it works well even in virtual-memory environments.
+
+Insertion sort, merge sort, heapsort, and quicksort are all comparison sorts: they
+determine the sorted order of an input array by comparing elements. There is the performance limitations
+of comparison sorts. Lower bound of Big Omega(nlgn)
+on the worst-case running time of any comparison sort on n inputs, thus showing
+that heapsort and merge sort are asymptotically optimal comparison sorts.
+
+We can beat this lower bound of Big Omega(nlgn)
+if we can gather information about the sorted order of the input by means other
+than comparing elements: counting sort algorithm, radix sort algorithm, bucket sort algorithm.
+
+The running time of quicksort depends on whether the partitioning is balanced or
+unbalanced, which in turn depends on which elements are used for partitioning.
+If the partitioning is balanced, the algorithm runs asymptotically as fast as merge sort. 
+If the partitioning is unbalanced, however, it can run asymptotically as slowly as insertion sort.
+
+Thus, if the partitioning is maximally unbalanced at every recursive level of the
+algorithm, the running time is Big Theta(n^2). Therefore the worst-case running time of
+quicksort is no better than that of insertion sort. Moreover, the Big Theta(n^2) running time
+occurs when the input array is already completely sorted—a common situation in
+which insertion sort runs in O(n) time.
+
+We can sometimes add randomization to an
+algorithm in order to obtain good expected performance over all inputs. Many people
+regard the resulting randomized version of quicksort as the sorting algorithm
+of choice for large enough inputs.
+
+Both the deterministic and randomized quicksort algorithms have the same best-case running times of O(nlgn) and the same worst-case running times of O(n^22).  
+The difference is that with the deterministic algorithm, a particular input can elicit that worst-case behavior.  
+With the randomized algorithm, however, no input can always elicit the worst-case behavior.  
+The reason it matters is that, depending on how partitioning is implemented, an input that is already sorted--
+or almost sorted--can elicit the worst-case behavior in deterministic quicksort.
+
+This means that using non-randomized pivots can be a security vulnerability. 
+An adversary can craft an input that consistently results in this worst-case behavior, making it easier to run a denial-of-service attack on your server. 
+This is an important practical concern on server-side software that deals with any sort of user input.
+
+We can improve the running time of quicksort in practice by taking advantage of the
+fast running time of insertion sort when its input is “nearly” sorted. Upon calling
+quicksort on a subarray with fewer than k elements, let it simply return without
+sorting the subarray. After the top-level call to quicksort returns, run insertion sort
+on the entire array to finish the sorting process. Argue that this sorting algorithm
+runs in O(nk + nlg(n/k)) expected time. How should we pick k, both in theory
+and in practice?
+
+If there is an array of N numbers which are same time complexity depends on the particular implementation.
+If there is only one kind of comparison (≤ or <) to determine where the other elements go relative to the pivot, 
+they will all go into one of the partitions, and you will get O(n^2) performance, since the problem size will decrease by only 1 each step.
+If there are two kinds of comparisons, for example < for elements on the left and > for elements on the right, as is the case in a two-pointer implementation, 
+and if you take care to move the pointers in step, then you might get perfect O(nlogn) performance, because half the equal elements will be split evenly in the two partitions.
+So it depends whether you have this special case in mind when implementing the algorithm.
+Practical implementations often handle a broader special case: 
+if there are no swaps in the partitioning step, they assume the data is nearly sorted, and use an insertion sort, 
+which gives an even better O(n) in the case of all equal elements.
+
+
