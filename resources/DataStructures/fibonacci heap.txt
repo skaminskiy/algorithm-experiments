@@ -1,0 +1,15 @@
+The Fibonacci heap data structure serves a dual purpose. First, it supports a set of
+operations that constitutes what is known as a “mergeable heap.” Second, several
+Fibonacci-heap operations run in constant amortized time, which makes this data
+structure well suited for applications that invoke these operations frequently.
+
+From a theoretical standpoint, Fibonacci heaps are especially desirable when the
+number of EXTRACT-MIN and DELETE operations is small relative to the number
+of other operations performed. This situation arises in many applications.
+
+From a practical point of view, however, the constant factors and programming
+complexity of Fibonacci heaps make them less desirable than ordinary binary
+(or k-ary) heaps for most applications, except for certain applications that manage
+large amounts of data. Thus, Fibonacci heaps are predominantly of theoretical interest.
+If a much simpler data structure with the same amortized time bounds as
+Fibonacci heaps were developed, it would be of practical use as well.

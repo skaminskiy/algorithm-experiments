@@ -1,0 +1,4 @@
+Electronic circuit designs often need to make the pins of several components electrically
+equivalent by wiring them together. To interconnect a set of n pins, we can
+use an arrangement of n  1 wires, each connecting two pins. Of all such arrangements,
+the one that uses the least amount of wire is usually the most desirable.

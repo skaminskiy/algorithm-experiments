@@ -1,0 +1,2 @@
+van Emde Boas trees support each of the dynamic set operations: SEARCH, INSERT, DELETE, MINIMUM, MAXIMUM, SUCCESSOR,
+and PREDECESSOR—in O(lglgn) time.

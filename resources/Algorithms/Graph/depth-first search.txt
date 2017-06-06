@@ -1,0 +1,3 @@
+Depth-first search yields valuable information about the structure of a graph.
+
+The running time of DFS is Big Theta(V+E).

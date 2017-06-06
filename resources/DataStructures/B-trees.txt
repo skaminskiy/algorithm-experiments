@@ -1,0 +1,7 @@
+B-trees are balanced search trees designed to work well on disks or other directaccess
+secondary storage devices. B-trees are similar to red-black trees (Chapter
+13), but they are better at minimizing disk I/O operations. Many database systems
+use B-trees, or variants of B-trees, to store information.
+B-trees differ from red-black trees in that B-tree nodes may have many children,
+from a few to thousands. That is, the “branching factor” of a B-tree can be quite
+large, although it usually depends on characteristics of the disk unit used.

@@ -1,0 +1,2 @@
+We can use depth-first search to perform a topological sort
+of a directed acyclic graph, or a “dag” as it is sometimes called.

@@ -1,0 +1,2 @@
+A classic application of depth-first search: decomposing a directed
+graph into its strongly connected components.

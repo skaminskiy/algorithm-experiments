@@ -1,0 +1,26 @@
+Just as we can model a road map as a directed graph in order to find the shortest
+path from one point to another, we can also interpret a directed graph as a “flow
+network” and use it to answer questions about material flows.
+Flow networks can model many problems, including liquids flowing through pipes,
+parts through assembly lines, current through electrical networks, and information
+through communication networks.
+
+1) The Ford-Fulkerson method. We call it a “method” rather than an “algorithm” because it encompasses
+several implementations with differing running times. The Ford-Fulkerson method
+depends on three important ideas that transcend the method and are relevant to
+many flow algorithms and problems: residual networks, augmenting paths, and
+cuts.
+
+2) The Edmonds-Karp algorithm. We call the Ford-Fulkerson method so implemented the
+Edmonds-Karp algorithm. We now prove that the Edmonds-Karp algorithm runs
+in O(VE^2) time.
+
+3) Push-relabel algorithms. To date, many of the asymptotically fastest maximum-flow algorithms are
+push-relabel algorithms, and the fastest actual implementations of maximum-flow
+algorithms are based on the push-relabel method. Push-relabel methods also efficiently
+solve other flow problems, such as the minimum-cost flow problem. This
+section introduces Goldberg’s “generic” maximum-flow algorithm, which has a
+simple implementation that runs in O((V^2)E) time, thereby improving upon the
+O(VE^2) bound of the Edmonds-Karp algorithm.
+
+4) The relabel-to-front algorithm.

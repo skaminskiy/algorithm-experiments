@@ -8,3 +8,19 @@
 	- merge sort
 	- find maximum subarray
 	- Strassen's algorithm for multiplying square matrices
+	
+3) optimization problems
+
+	3.1. dynamic programming
+	
+		- rod cutting (Serling Enterprises buys long steel rods and cuts them into shorter rods, which it then sells.) O(n^2) running time.
+		- matrix-chain multiplication O(n^3) running time.
+		- longest common subsequence
+		- optimal binary search trees
+		- Floyd-Warshall algorithm, which finds shortest paths between all pairs of vertices
+	
+	3.2. greedy algorithms
+	
+		- an activity-selection problem
+		- Dijkstra’s algorithm
+	
