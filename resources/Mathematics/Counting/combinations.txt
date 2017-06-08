@@ -1,0 +1,38 @@
+How many different committees of three students can be formed from a group of four students?
+
+Solution: To answer this question, we need only find the number of subsets with three elements
+from the set containing the four students. We see that there are four such subsets, one for
+each of the four students, because choosing three students is the same as choosing one of the
+four students to leave out of the group. This means that there are four ways to choose the
+three students for the committee, where the order in which these students are chosen does not
+matter.
+
+THEOREM: The number of r-combinations of a set with n elements, where n is a nonnegative integer and
+r is an integer with 0 ≤ r ≤ n, equals
+
+C(n, r) = n! / (r!*(n − r)!)
+
+
+Combinations with Repetition:
+
+How many ways are there to select four pieces of fruit from a bowl containing apples, oranges,
+and pears if the order in which the pieces are selected does not matter, only the type of fruit and
+not the individual piece matters, and there are at least four pieces of each type of fruit in the
+bowl?
+
+Solution: To solve this problem we list all the ways possible to select the fruit. There are 15
+ways:
+
+4 apples						4 oranges 						4 pears
+3 apples, 1 orange				3 apples, 1 pear 				3 oranges, 1 apple
+3 oranges, 1 pear 				3 pears, 1 apple 				3 pears, 1 orange
+2 apples, 2 oranges 			2 apples, 2 pears 				2 oranges, 2 pears
+2 apples, 1 orange, 1 pear 		2 oranges, 1 apple, 1 pear 		2 pears, 1 apple, 1 orange
+
+The solution is the number of 4-combinations with repetition allowed from a three-element set,
+{apple, orange, pear}.
+
+THEOREM: There are C(n + r − 1, r) = C(n + r − 1, n − 1) r-combinations from a set with n elements
+when repetition of elements is allowed.
+
+(n + r − 1)! / (r!*(n − 1)!)

@@ -1,0 +1,27 @@
+Let S = {a, b, c}. The 2-permutations of S are the ordered arrangements
+a, b; a, c; b, a; b, c; c, a; and c, b. Consequently, there are six 2-permutations of this set
+with three elements. There are always six 2-permutations of a set with three elements. There
+are three ways to choose the first element of the arrangement. There are two ways to choose the
+second element of the arrangement, because it must be different from the first element. Hence,
+by the product rule, we see that P(3, 2) = 3 * 2 = 6. the first element. By the product rule, it
+follows that P(3, 2) = 3 * 2 = 6.
+▲
+We now use the product rule to find a formula for P(n, r) whenever n and r are positive integers
+with 1 ≤ r ≤ n.
+
+THEOREM: If n is a positive integer and r is an integer with 1 ≤ r ≤ n, then there are
+P(n, r) = n(n − 1)(n − 2) · · · (n − r + 1)
+r-permutations of a set with n distinct elements.
+
+COROLLARY: If n and r are integers with 0 ≤ r ≤ n, then P(n, r) = n! / (n − r)! 
+
+
+Permutations with repetition:
+
+How many strings of length r can be formed from the uppercase letters of the English alphabet?
+
+Solution: By the product rule, because there are 26 uppercase English letters, and because each
+letter can be used repeatedly, we see that there are 26^r strings of uppercase English letters of
+length r.
+
+THEOREM: The number of r-permutations of a set of n objects with repetition allowed is n^r

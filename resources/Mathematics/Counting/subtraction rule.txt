@@ -1,0 +1,26 @@
+Suppose that a task can be done in one of two ways, but some of the ways to do it are common
+to both ways. In this situation, we cannot use the sum rule to count the number of ways to do
+the task.
+
+THE SUBTRACTION RULE If a task can be done in either n1 ways or n2 ways, then the
+number of ways to do the task is n1 + n2 minus the number of ways to do the task that are
+common to the two different ways.
+
+How many bit strings of length eight either start with a 1 bit or end with the two bits 00?
+
+Solution: We can construct a bit string of length eight that either starts with a 1 bit or ends
+with the two bits 00, by constructing a bit string of length eight beginning with a 1 bit or by
+constructing a bit string of length eight that ends with the two bits 00. We can construct a bit
+string of length eight that begins with a 1 in 27 = 128 ways. This follows by the product rule,
+because the first bit can be chosen in only one way and each of the other seven bits can be
+chosen in two ways. Similarly, we can construct a bit string of length eight ending with the two
+bits 00, in 26 = 64 ways. This follows by the product rule, because each of the first six bits can
+be chosen in two ways and the last two bits can be chosen in only one way.
+Some of the ways to construct a bit string of length eight starting with a 1 are the same
+as the ways to construct a bit string of length eight that ends with the two bits 00. There are
+25 = 32 ways to construct such a string. This follows by the product rule, because the first
+bit can be chosen in only one way, each of the second through the sixth bits can be chosen
+in two ways, and the last two bits can be chosen in one way. Consequently, the number of
+bit strings of length eight that begin with a 1 or end with a 00, which equals the number
+of ways to construct a bit string of length eight that begins with a 1 or that ends with 00,
+equals 128 + 64 − 32 = 160.

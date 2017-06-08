@@ -1,0 +1,17 @@
+THE DIVISION RULE There are n/d ways to do a task if it can be done using a procedure
+that can be carried out in n ways, and for every way w, exactly d of the n ways correspond
+to way w.
+
+How many different ways are there to seat four people around a circular table, where two
+seatings are considered the same when each person has the same left neighbor and the same
+right neighbor?
+
+Solution: We arbitrarily select a seat at the table and label it seat 1. We number the rest of the
+seats in numerical order, proceeding clockwise around the table. Note that are four ways to
+select the person for seat 1, three ways to select the person for seat 2, two ways to select the
+person for seat 3, and one way to select the person for seat 4. Thus, there are 4! = 24 ways to
+order the given four people for these seats. However, each of the four choices for seat 1 leads
+to the same arrangement, as we distinguish two arrangements only when one of the people has
+a different immediate left or immediate right neighbor. Because there are four ways to choose
+the person for seat 1, by the division rule there are 24/4 = 6 different seating arrangements of
+four people around the circular table.

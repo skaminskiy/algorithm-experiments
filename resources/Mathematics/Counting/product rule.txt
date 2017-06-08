@@ -1,0 +1,2 @@
+By the product rule, it follows that the nested loop is traversed n1n2 · · · nm times.
+Hence, the final value of k is n1n2 · · · nm.

@@ -1,0 +1,14 @@
+In a version of the computer language BASIC, the name of a variable is a string of one or
+two alphanumeric characters, where uppercase and lowercase letters are not distinguished. (An
+alphanumeric character is either one of the 26 English letters or one of the 10 digits.) Moreover,
+a variable name must begin with a letter and must be different from the five strings of two
+characters that are reserved for programming use. How many different variable names are there
+in this version of BASIC?
+
+Solution: Let V equal the number of different variable names in this version of BASIC. Let V1
+be the number of these that are one character long and V2 be the number of these that are two
+characters long. Then by the sum rule, V = V1 + V2. Note that V1 = 26, because a one-character
+variable name must be a letter. Furthermore, by the product rule there are 26 * 36 strings of length
+two that begin with a letter and end with an alphanumeric character. However, five of these
+are excluded, so V2 = 26 * 36 − 5 = 931. Hence, there are V = V1 + V2 = 26 + 931 = 957
+different names for variables in this version of BASIC.

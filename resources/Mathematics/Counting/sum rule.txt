@@ -1,0 +1,2 @@
+The sum rule shows that the final value of k, which is the number of ways to traverse one of the m loops is
+n1 + n2 +· · ·+nm.
