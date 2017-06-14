@@ -25,3 +25,29 @@ letter can be used repeatedly, we see that there are 26^r strings of uppercase E
 length r.
 
 THEOREM: The number of r-permutations of a set of n objects with repetition allowed is n^r
+
+
+Permutations with Indistinguishable Objects:
+
+How many different strings can be made by reordering the letters of the word SUCCESS?
+
+Solution: Because some of the letters of SUCCESS are the same, the answer is not given by the
+number of permutations of seven letters. This word contains three Ss, two Cs, one U, and one E.
+To determine the number of different strings that can be made by reordering the letters, first note
+that the three Ss can be placed among the seven positions in C(7, 3) different ways, leaving four 
+positions free. Then the two Cs can be placed in C(4, 2) ways, leaving two free positions. The U
+can be placed in C(2, 1) ways, leaving just one position free. Hence E can be placed in C(1, 1)
+way. Consequently, from the product rule, the number of different strings that can be made is
+
+C(7, 3)C(4, 2)C(2, 1)C(1, 1) = (7!/(3!*4!))*(4!/(2!*2!))*(2!/(1!*1!))*(1!/(1!*0!))
+= 7!/(3!*2!*1!*1!) = 420
+
+THEOREM: The number of different permutations of n objects, where there are n1 indistinguishable
+objects of type 1, N2 indistinguishable objects of type 2, . . . , and Nk indistinguishable objects
+of type k, is
+
+n!/(n1!*n2! · · · nk!) 
+
+
+
+.

@@ -1,0 +1,73 @@
+Many counting problems can be solved by enumerating theways objects can be placed into boxes
+(where the order these objects are placed into the boxes does not matter).
+
+DISTINGUISHABLE OBJECTS AND DISTINGUISHABLE BOXES:
+
+How many ways are there to distribute hands of 5 cards to each of four players from the standard
+deck of 52 cards?
+
+Solution:We will use the product rule to solve this problem. To begin, note that the first player
+can be dealt 5 cards in C(52, 5) ways. The second player can be dealt 5 cards in C(47, 5) ways,
+because only 47 cards are left. The third player can be dealt 5 cards in C(42, 5) ways. Finally,
+the fourth player can be dealt 5 cards in C(37, 5) ways. Hence, the total number of ways to deal
+four players 5 cards each is
+
+C(52, 5)C(47, 5)C(42, 5)C(37, 5) = (52!/(47!*5!))*(47!/(42!*5!))*(42!/(37!*5!))*(37!/(32!*5!)) = 52!/(5!*5!*5!*5!*32!)
+
+Remark: The solution to Example 8 equals the number of permutations of 52 objects, with 5 indistinguishable
+objects of each of four different types, and 32 objects of a fifth type. The cards not dealt to any player correspond to cards in the positions assigned
+to objects of the fifth type.
+
+THEOREM: The number of ways to distribute n distinguishable objects into k distinguishable boxes so
+that ni objects are placed into box i, i = 1, 2, . . . , k, equals
+n! / (n1!*n2!* · · nk!)
+
+
+INDISTINGUISHABLE OBJECTS AND DISTINGUISHABLE BOXES:
+
+How many ways are there to place 10 indistinguishable balls into eight distinguishable bins?
+
+Solution: The number of ways to place 10 indistinguishable balls into eight bins equals the number
+of 10-combinations from a set with eight elements when repetition is allowed. Consequently,
+there are
+
+C(8 + 10 − 1, 10) = C(17, 10) = 17!/(10!*7!) = 19,448
+
+This means that there are C(n + r − 1, n − 1) ways to place r indistinguishable objects
+into n distinguishable boxes.
+
+
+DISTINGUISHABLE OBJECTS AND INDISTINGUISHABLE BOXES:
+
+How many ways are there to put four different employees into three indistinguishable offices,
+when each office can contain any number of employees?
+
+There is no simple closed formula for the number of ways to distribute n distinguishable
+objects into j indistinguishable boxes. However, there is a formula involving a summation.
+
+Let S(n, j ) denote the number of ways to distribute n distinguishable
+objects into j indistinguishable boxes so that no box is empty. The numbers S(n, j ) are
+called Stirling numbers of the second kind. For instance, Example 10 shows that S(4, 3) = 6,
+S(4, 2) = 7, and S(4, 1) = 1. We see that the number of ways to distribute n distinguishable
+objects into k indistinguishable boxes (where the number of boxes that are nonempty equals k,
+k − 1, . . . , 2, or 1) equals	SUM from k to j=1 => S(n, j ).
+
+
+INDISTINGUISHABLE OBJECTSANDINDISTINGUISHABLE BOXES:
+
+How many ways are there to pack six copies of the same book into four identical boxes, where
+a box can contain as many as six books?
+
+Solution:We will enumerate all ways to pack the books. For each way to pack the books, we will
+list the number of books in the box with the largest number of books, followed by the numbers
+of books in each box containing at least one book, in order of decreasing number of books in a
+box. The ways we can pack the books are
+6
+5, 1
+4, 2
+4, 1, 1
+3, 3
+3, 2, 1
+3, 1, 1, 1
+2, 2, 2
+2, 2, 1, 1.
