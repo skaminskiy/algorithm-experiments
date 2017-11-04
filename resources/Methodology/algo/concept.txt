@@ -1,0 +1,18 @@
+1) understand a problem
+2) input and output with samples
+3) general concept
+    3.1) brute force and big O
+    3.2) improve and big O
+        3.2.1) dynamic
+        3.2.2) sorting
+        3.2.3) modified sort/search
+        3.2.4) backtracking
+        3.2.5) extra space and data structure
+4) implementation in pseudo code
+5) testing
+6) implementation in java
+7) edge cases
+8) testing
+
+
+

@@ -1,0 +1,53 @@
+What is inside, big O, java, use cases
+
+1) Array
+    inside: array
+    big O time complexity: access: 1/1 (average/worst), search: n/n, insert: n/n, delete: n/n
+    big O space complexity: n (worst)
+    java: ArrayList
+    use cases: a lot; support insertion order
+
+2) HashMap
+    inside: array of buckets. Each bucket has linked list or balanced tree (if certain threshold is reached,
+        this will improve the worst case performance from O(n) to O(log n))
+    big O time complexity: access: 1/1 (average/worst), search: n/n, insert: n/n, delete: n/n
+    big O space complexity: n (worst)
+    java: HashMap
+    use cases: key/value access; support insertion order
+
+3) LinkedList/Queue/Deque
+    inside: a chain of entities
+    big O time: access: n/n, search: n/n, insert: 1/1, delete: 1/1
+    big O space: n
+    java: LinkedList
+    use cases: insertion and deletion
+
+4) Stack
+    inside: extends Vector
+    big O time: access: n/n, search: n/n, insert: 1/1, delete: 1/1
+    big O space: n
+    java: Stack
+    use cases: insertion and deletion
+
+5) Binary search tree (ordered)
+    inside:
+    big O time: access: logn/, search: logn/, insert: logn/, delete: logn/
+    big O space: n
+    java: Stack
+    use cases: insertion and deletion
+
+6) Binary tree
+
+
+
+
+8) Heap
+9) Graph
+
+LinkedHashSet
+LinkedHashMap
+TreeSet
+TreeMap
+PriorityQueue
+
+
